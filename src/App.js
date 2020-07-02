@@ -10,7 +10,7 @@ function App() {
     <HashRouter basename='/'>
       <Switch>
         <Route path='/' exact component = {MainScroll}/>
-        <Route path='/janineteeneightynine' exact component = {MainScroll}/>
+        <Route path='/portfolio' exact component = {MainScroll}/>
         <Route path='/articles/:type/:title' exact component = {Article}/>
         <Route path='/articles' exact component = {ArticlesByCategory}/>
         <Route path='/articles/:type' exact component = {ArticlesByCategory}/>
