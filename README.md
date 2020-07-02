@@ -1,4 +1,4 @@
-View the site [here](https://michael-digi.github.io/janineteeneightynine/#/).
+View the site [here](https://janineteeneightynine.github.io/portfolio/#/).
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
