@@ -20,12 +20,12 @@ function ContactSection() {
 
   function sendEmail(e) {
     e.preventDefault();
-    // emailjs.send('gmail', 'template_9eQqbgqQ', templateParams, 'user_oXT93Zat58wpBbUU1Pfxs')
-    //   .then((result) => {
-    //       console.log(result.text);
-    //   }, (error) => {
-    //       console.log(error.text);
-    //   });
+    emailjs.send('janineteeneightynine', ' template_ohYW4Djq', templateParams, 'user_tkLXlNfLDSsTsMrxlmuVn')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
   }
   
   function handleEmail(event) {
