@@ -1,0 +1,51 @@
+#sidebar {
+  display: flex;
+  text-align: center;
+  width:100vh;
+  position: fixed;
+  left: 0;
+  transform-origin: left top;
+  transform:rotate(-90deg) translateX(-100%);
+  background-color: white;
+  border-bottom: 1px solid lightgray;
+}
+
+.navTab {
+  width: 25%;
+  max-height: 45px;
+  font-size: .9rem;
+  line-height: 45px;
+  letter-spacing: 1px;
+  transition: ease-in-out .25s;
+  color: black;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.navTabActive {
+  width: 25%;
+  max-height: 45px;
+  font-size: .9rem;
+  line-height: 45px;
+  letter-spacing: 1px;
+  transition: ease-in-out .25s;
+  color: black;
+  overflow: hidden;
+  text-decoration: none;
+  background-color: #f7f3a9;
+  cursor: pointer;
+  color: black;
+}
+
+.navTab:hover {
+  background-color: #f7f3a9;
+  cursor: pointer;
+  color: black;
+}
+
+@media (max-width: 768px) {
+  /* For mobile phones: */
+  #sidebar {
+    display: none;
+  }
+}

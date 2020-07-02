@@ -1,0 +1,63 @@
+#projectScroll {
+  grid-column: 2/3;
+  grid-row: 1/6;
+  border-right: 1px solid lightgray;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+@media (max-width: 768px) {
+  /* For mobile phones: */
+  #projectScroll {
+    display: flex;
+    flex-direction: row;
+    grid-column: 1/6;
+    grid-row: 4/6;
+    margin: 0% 5% 0% 5%;
+    border: none;
+    overflow-y: hidden;
+  }
+}
+
+@media (max-width: 768px) {
+  /* For mobile phones: */
+  #projectScroll .sectionTitle{
+    font-size: 3vh;
+  }
+}
+
+
+#projectScroll::-webkit-scrollbar { width: 0 !important }
+
+.thumbnail#queensboro {
+  background-image: url('../images/Queensboro/thumbnail/Queensboro_thumbnail-min.jpg');
+}
+
+.thumbnail#harlem {
+  background-image: url('../images/Harlem/thumbnail/Harlem_thumbnail-min.jpg');
+}
+
+.thumbnail#_3M {
+  background-image: url('../images/3MBoothatNeoCon2012/thumbnail/3M_thumbnail-min.jpg');
+}
+
+.thumbnail#bathbw {
+  background-image: url('../images/Bath_BodyWorks/thumbnail/BBWWallflower_thumbnail-min.jpg');
+}
+
+.thumbnail#fortgreene {
+  background-image: url('../images/FortGreene/thumbnail/FtGreene_thumbnail-min.webp');
+}
+
+.thumbnail#sevenseven {
+  background-image: url('../images/SevenSeven/thumbnail/Thumbnail-min.jpg');
+}
+
+.thumbnail#xsre {
+  background-image: url('../images/XSRE/thumbnail/XSRE_thumbnail-min.jpg');
+}
+
+.thumbnail#franklin {
+  background-image: url('../images/FranklinSt/thumbnail/FranklinSt_thumbnail-min.jpg');
+}
+

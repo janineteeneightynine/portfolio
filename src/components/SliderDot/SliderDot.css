@@ -1,0 +1,14 @@
+.dot {
+  height: 8px;
+  width: 8px;
+  background-color: gray;
+  border-radius: 10px;
+  opacity: .5
+}
+
+.dotClicked {
+  height: 8px;
+  width: 8px;
+  border-radius: 10px;
+  background-color: black;
+}

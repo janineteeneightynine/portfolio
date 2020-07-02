@@ -1,0 +1,171 @@
+#sidebar {
+  display: flex;
+  text-align: center;
+  width:100vh;
+  position: fixed;
+  left: 0;
+  transform-origin: left top;
+  transform:rotate(-90deg) translateX(-100%);
+  background-color: white;
+  border-bottom: 1px solid lightgray;
+}
+
+#navMobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  /* For mobile phones: */
+  #navMobile {
+    z-index: 4;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: space-between;
+    width: 10%;
+    min-width: 50px;
+    top: 0;
+    right: 0;
+    margin-right: 2.5%;
+    padding: 5% 2.5% 5% 2.5%;
+    transition: top .6s;
+  }
+  #navMobile:hover {
+    cursor: pointer;
+  }
+}
+
+#dropdown {
+  display: none;
+}
+
+.navDot {
+  border: 1px solid gray;
+  background-color: white;
+  border-radius: 200px;
+  height: 8px;
+  width: 8px;
+}
+
+@media (max-width: 768px) {
+  #dropdown {
+    display: flex;
+    flex-direction: column;
+    z-index: 3;
+    position: fixed;
+    top: -200px;
+    height: 200px;
+    width: 100%;
+    background-color: white;
+    transition: top .6s;
+  }
+}
+
+.element {
+  height: 100%;
+}
+
+.elementPhotoJournal {
+  height: 100%;
+}
+
+.elementDesign {
+  height: 100%;
+}
+
+.elementArt {
+  height: 100%;
+}
+
+.elementContact {
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .elementContact {
+    height: 100%;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .elementPhotoJournal {
+
+  }
+}
+
+@media (max-width: 768px) {
+  .element {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10%;
+    /* height: 100%; */
+    /* width: 100%; */
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+}
+
+@media (max-width: 768px) {
+  /* For mobile phones: */
+  .elementArt {
+    max-height: 75vh;
+  }
+}
+
+@media (max-width: 1024px) {
+  .elementArt {
+    max-height: 75vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .elementDesign {
+  }
+}
+
+.navTab {
+  width: 20%;
+  max-height: 45px;
+  font-size: .9rem;
+  line-height: 45px;
+  letter-spacing: 1px;
+  transition: ease-in-out .25s;
+  color: black;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .navTab {
+    min-width: 100%;
+    line-height: 0px;
+    padding-left: 10%;
+    background-color: none;
+  }
+}
+
+
+
+@media (min-width: 768px) {
+  .navTab:hover {
+    background-color: #f7f3a9;
+    cursor: pointer;
+    color: black;
+  }
+}
+
+@media (min-width: 768px) {
+  .navTab.active {
+    background-color: #f7f3a9;
+    cursor: pointer;
+    color: black;
+  }
+}
+
+
+@media (max-width: 768px) {
+  #sidebar {
+    display: none;
+  }
+}
