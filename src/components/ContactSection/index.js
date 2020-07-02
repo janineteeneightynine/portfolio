@@ -20,7 +20,7 @@ function ContactSection() {
 
   function sendEmail(e) {
     e.preventDefault();
-    emailjs.send('janineteeneightynine', ' template_ohYW4Djq', templateParams, 'user_tkLXlNfLDSsTsMrxlmuVn')
+    emailjs.send('janineteeneightynine', 'template_ohYW4Djq', templateParams, 'user_tkLXlNfLDSsTsMrxlmuVn')
       .then((result) => {
           console.log(result.text);
       }, (error) => {
