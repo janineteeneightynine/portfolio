@@ -63,6 +63,13 @@ useEffect(() => {
     if (px === '0px') document.getElementById('dropdown').style.top = '-200px'
   }
 
+  function hideDropdown() {
+    let dropdown = document.getElementById('dropdown')
+    let compStyles = window.getComputedStyle(dropdown);
+    let px = compStyles.getPropertyValue('top')
+    if (px === '0px') document.getElementById('dropdown').style.top = '-200px'
+  }
+
   const navTabReached = {
     backgroundColor: '#f7f3a9',
     cursor: 'pointer',
@@ -76,46 +83,46 @@ useEffect(() => {
         <div className='navDot'></div>
         <div className='navDot'></div>
       </div>
-      <div id='dropdown'>
-        <Link className='navTab' activeClass='active' to='projects' spy={true} smooth={true} offset={0} duration={1000}>Projects</Link>
-        <Link className='navTab' activeClass='active' to='photos' spy={true} smooth={true} offset={0} duration={1000}>Photo Journal</Link>
-        <Link className='navTab' activeClass='active' to='art' spy={true} smooth={true} offset={-100} duration={1000}>Art Gallery</Link>
-        <Link className='navTab' activeClass='active' to='design' spy={true} smooth={true} offset={-100} duration={1000}>Design Gallery</Link>
-        <Link className='navTab' activeClass='active' to="contact" spy={true} smooth={true} offset={0} duration={1000}>Contact</Link>
+      <div id='dropdown' >
+        <Link className='navTab' onClick={() => hideDropdown()} activeClass='active' to='projects' spy={true} smooth={true} offset={0} duration={1000}>Projects</Link>
+        <Link className='navTab' onClick={() => hideDropdown()} activeClass='active' to='art' spy={true} smooth={true} offset={-100} duration={1000}>Art Gallery</Link>
+        <Link className='navTab' onClick={() => hideDropdown()} activeClass='active' to='design' spy={true} smooth={true} offset={-100} duration={1000}>Design Gallery</Link>
+        <Link className='navTab' onClick={() => hideDropdown()} activeClass='active' to='photos' spy={true} smooth={true} offset={0} duration={1000}>Photo Journal</Link>
+        <Link className='navTab' onClick={() => hideDropdown()} activeClass='active' to="contact" spy={true} smooth={true} offset={0} duration={1000}>Contact</Link>
       </div>
       <div id='sidebar'>
-        <Link className='navTab' activeClass='active' to="contact" spy={true} smooth={true} offset={0} duration={1000}>Contact</Link>
-        <Link className='navTab' activeClass='active' to='design' spy={true} smooth={true} offset={0} duration={1000}>Design Gallery</Link>
-        <Link className='navTab' activeClass='active' to='art' spy={true} smooth={true} offset={0} duration={1000}>Art Gallery</Link>
-        <Link className='navTab' activeClass='active' to='photos' spy={true} smooth={true} offset={0} duration={1000}>Photo Journal</Link>
-        <Link className='navTab' activeClass='active' to='projects' spy={true} smooth={true} offset={0} duration={1000}>Projects</Link>
+        <Link className='navTab' activeClass='active' to="contact" spy={true} smooth={true} offset={-150} duration={1000}>Contact</Link>
+        <Link className='navTab' activeClass='active' to='photos' spy={true} smooth={true} offset={-150} duration={1000}>Photo Journal</Link>
+        <Link className='navTab' activeClass='active' to='design' spy={true} smooth={true} offset={-150} duration={1000}>Design Gallery</Link>
+        <Link className='navTab' activeClass='active' to='art' spy={true} smooth={true} offset={-150} duration={1000}>Art Gallery</Link>
+        <Link className='navTab' activeClass='active' to='projects' spy={true} smooth={true} offset={-150} duration={1000}>Projects</Link>
       </div>
       {/* <LandingPage /> */}
-      <Element name='projects' className='element'>
+      <Element name='projects' className='element' onClick={() => hideDropdown()}>
         <SectionTitleMobile section='Projects' />
         <Projects />
       </Element>
       
       <Suspense fallback={<EmptyGallery />}>
-        <Element name='photos' className='elementPhotoJournal'>
-          <PhotoJournal />
-        </Element>
-      </Suspense>
-
-      <Suspense fallback={<EmptyGallery />}>
-        <Element name='art' className='elementArt'>
+        <Element name='art' className='elementArt' onClick={() => hideDropdown()}>
           <ArtGalleryContainer />
         </Element>
       </Suspense>
 
       <Suspense fallback={<EmptyGallery />}>
-        <Element name='design' className="elementDesign">
+        <Element name='design' className="elementDesign" onClick={() => hideDropdown()}>
           <DesignGalleryContainer />
         </Element>
       </Suspense>
 
       <Suspense fallback={<EmptyGallery />}>
-        <Element name='contact' className='element'>
+        <Element name='photos' className='elementPhotoJournal' onClick={() => hideDropdown()}>
+          <PhotoJournal />
+        </Element>
+      </Suspense>
+
+      <Suspense fallback={<EmptyGallery />}>
+        <Element name='contact' className='element' onClick={() => hideDropdown()}>
           <ContactSection />
         </Element>
       </Suspense>

@@ -23,7 +23,7 @@ function ArtGallery(props) {
       else {
         img = props.articles[index]['media:content'][1].url
       }
-      if (index <= 3) {
+      if (index <= 2) {
         one.push(
           <Post
             type={'art'}
@@ -36,7 +36,7 @@ function ArtGallery(props) {
           />
         )
       }
-      if(index > 3 && index <= 7) {
+      if(index > 2 && index <= 5) {
         two.push(
           <Post
             type={'art'}
@@ -49,7 +49,7 @@ function ArtGallery(props) {
           />
         )
       }
-      if(index === 8) {
+      if(index > 5 && index <= 8) {
         three.push(
           <Post
             type={'art'}

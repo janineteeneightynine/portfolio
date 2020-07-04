@@ -1,10 +1,19 @@
 #seeMore {
   min-height: 100%;
-  margin: 0px;
+  padding-bottom: 50%;
 }
 
 @media (max-width: 768px) {
+
+
   #seeMore .postTitle {
-    font-size: 1.75rem;
+    display: flex;
+    font-size: 5vh;
+    min-width: 55vh;
+    transform: rotate(270deg);
+    align-self: center;
+    justify-self: center;
+    justify-content: flex-end;
+    overflow-y: visible;
   }
 }

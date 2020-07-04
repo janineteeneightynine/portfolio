@@ -13,6 +13,7 @@ function PhotoJournal() {
     .then(response => response.json())
     .then(json => {
       let photos = json.data.user.edge_owner_to_timeline_media.edges
+      console.log(photos[0].node.display_url, ' this is photos')
       setPhotos(photos)
     })
   }, [])

@@ -13,7 +13,7 @@
 .navTab {
   width: 25%;
   max-height: 45px;
-  font-size: .9rem;
+  font-size: 2vh;
   line-height: 45px;
   letter-spacing: 1px;
   transition: ease-in-out .25s;
@@ -25,20 +25,20 @@
 .navTabActive {
   width: 25%;
   max-height: 45px;
-  font-size: .9rem;
+  font-size: 2vh;
   line-height: 45px;
   letter-spacing: 1px;
   transition: ease-in-out .25s;
   color: black;
   overflow: hidden;
   text-decoration: none;
-  background-color: #f7f3a9;
+  background-color: #F9DF68;
   cursor: pointer;
   color: black;
 }
 
 .navTab:hover {
-  background-color: #f7f3a9;
+  background-color: #F9DF68;
   cursor: pointer;
   color: black;
 }

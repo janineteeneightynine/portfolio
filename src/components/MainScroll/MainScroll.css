@@ -5,7 +5,7 @@
   position: fixed;
   left: 0;
   transform-origin: left top;
-  transform:rotate(-90deg) translateX(-100%);
+  transform: rotate(-90deg) translateX(-100%);
   background-color: white;
   border-bottom: 1px solid lightgray;
 }
@@ -110,25 +110,20 @@
 @media (max-width: 768px) {
   /* For mobile phones: */
   .elementArt {
-    max-height: 75vh;
-  }
-}
-
-@media (max-width: 1024px) {
-  .elementArt {
-    max-height: 75vh;
+    min-height: 100%;
   }
 }
 
 @media (max-width: 768px) {
   .elementDesign {
+    min-height: 100%;
   }
 }
 
 .navTab {
   width: 20%;
   max-height: 45px;
-  font-size: .9rem;
+  font-size: 2vh;
   line-height: 45px;
   letter-spacing: 1px;
   transition: ease-in-out .25s;
@@ -149,7 +144,7 @@
 
 @media (min-width: 768px) {
   .navTab:hover {
-    background-color: #f7f3a9;
+    background-color: #F9DF68;
     cursor: pointer;
     color: black;
   }
@@ -157,7 +152,7 @@
 
 @media (min-width: 768px) {
   .navTab.active {
-    background-color: #f7f3a9;
+    background-color: #F9DF68;
     cursor: pointer;
     color: black;
   }

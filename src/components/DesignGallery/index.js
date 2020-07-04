@@ -23,7 +23,7 @@ function DesignGallery(props) {
       else {
         img = props.articles[index]['media:content'][1].url
       }
-      if (index <= 3) {
+      if (index <= 2) {
         one.push(
           <Post
             type={'design'}
@@ -36,7 +36,7 @@ function DesignGallery(props) {
           />
         )
       }
-      if(index > 3 && index <= 6) {
+      if(index > 2 && index <= 5) {
         two.push(
           <Post
             type={'design'}
@@ -49,7 +49,7 @@ function DesignGallery(props) {
           />
         )
       }
-      if(index === 7) {
+      if(index > 5 && index <= 7) {
         three.push(
           <Post
             type={'design'}

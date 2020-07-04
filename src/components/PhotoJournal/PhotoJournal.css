@@ -2,6 +2,7 @@
   display: grid;
   height: 100%;
   width: 100%;
+  margin-top: 5%;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(5, 1fr);
 }
@@ -78,7 +79,7 @@
   align-items: center;
   flex-direction: column;
   /* border: 1px solid black; */
-  padding-top: 15%;
+  padding-top: 10%;
   height: 100%;
   width: 100%;
 }
