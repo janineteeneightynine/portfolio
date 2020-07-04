@@ -85,8 +85,8 @@ useEffect(() => {
       </div>
       <div id='dropdown' >
         <Link className='navTab' onClick={() => hideDropdown()} activeClass='active' to='projects' spy={true} smooth={true} offset={0} duration={1000}>Projects</Link>
-        <Link className='navTab' onClick={() => hideDropdown()} activeClass='active' to='art' spy={true} smooth={true} offset={-100} duration={1000}>Art Gallery</Link>
-        <Link className='navTab' onClick={() => hideDropdown()} activeClass='active' to='design' spy={true} smooth={true} offset={-100} duration={1000}>Design Gallery</Link>
+        <Link className='navTab' onClick={() => hideDropdown()} activeClass='active' to='art' spy={true} smooth={true} offset={0} duration={1000}>Art Gallery</Link>
+        <Link className='navTab' onClick={() => hideDropdown()} activeClass='active' to='design' spy={true} smooth={true} offset={0} duration={1000}>Design Gallery</Link>
         <Link className='navTab' onClick={() => hideDropdown()} activeClass='active' to='photos' spy={true} smooth={true} offset={0} duration={1000}>Photo Journal</Link>
         <Link className='navTab' onClick={() => hideDropdown()} activeClass='active' to="contact" spy={true} smooth={true} offset={0} duration={1000}>Contact</Link>
       </div>

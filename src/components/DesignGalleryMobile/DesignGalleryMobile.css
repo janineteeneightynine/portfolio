@@ -6,7 +6,7 @@
 @media (max-width: 768px) {
   #designGalleryContainerMobile {
     display: grid;
-    height: 100%;
+    min-height: 100%;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
   }
@@ -33,7 +33,7 @@
   }
 
   #designGalleryContainerMobile .twoTenColumn #postContainer #seeMore {
-    overflow-y: visible;
+    /* overflow-y: visible; */
   }
   
   #designGalleryContainerMobile .twoTenColumn::-webkit-scrollbar { width: 0 !important }
