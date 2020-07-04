@@ -13,7 +13,7 @@ function PhotoJournal() {
     .then(response => response.json())
     .then(json => {
       let photos = json.data.user.edge_owner_to_timeline_media.edges
-      console.log(photos[0].node.display_url, ' this is photos')
+      console.log(photos[0], ' this is photos')
       setPhotos(photos)
     })
   }, [])
@@ -25,9 +25,9 @@ function PhotoJournal() {
         <div id='postContainer'>
           {photos.length >= 3 ?
            <>
-            <InstagramPhoto img={photos[0].node.display_url} />
-            <InstagramPhoto img={photos[1].node.display_url} />
-            <InstagramPhoto img={photos[2].node.display_url} />
+            <InstagramPhoto code={photos[0].node.shortcode}  img={photos[0].node.display_url} />
+            <InstagramPhoto code={photos[1].node.shortcode} img={photos[1].node.display_url} />
+            <InstagramPhoto code={photos[2].node.shortcode} img={photos[2].node.display_url} />
            </> : null
           }
         </div>
@@ -37,9 +37,9 @@ function PhotoJournal() {
         <div id='postContainer'>
         {photos.length >= 6 ?
            <>
-            <InstagramPhoto img={photos[3].node.display_url} />
-            <InstagramPhoto img={photos[4].node.display_url} />
-            <InstagramPhoto img={photos[5].node.display_url} />
+            <InstagramPhoto code={photos[3].node.shortcode} img={photos[3].node.display_url} />
+            <InstagramPhoto code={photos[4].node.shortcode} img={photos[4].node.display_url} />
+            <InstagramPhoto code={photos[5].node.shortcode} img={photos[5].node.display_url} />
            </> : null
           }
         </div>
@@ -49,9 +49,9 @@ function PhotoJournal() {
         <div id='postContainer'>
         {photos.length >= 9 ?
            <>
-            <InstagramPhoto img={photos[6].node.display_url} />
-            <InstagramPhoto img={photos[7].node.display_url} />
-            <InstagramPhoto img={photos[8].node.display_url} />
+            <InstagramPhoto code={photos[6].node.shortcode} img={photos[6].node.display_url} />
+            <InstagramPhoto code={photos[7].node.shortcode} img={photos[7].node.display_url} />
+            <InstagramPhoto code={photos[8].node.shortcode} img={photos[8].node.display_url} />
            </> : null
           }
         </div>
@@ -62,15 +62,15 @@ function PhotoJournal() {
           {photos.length >= 3 ?
            <>
             <SectionTitleMobile section={'Photo Journal'} />
-            <InstagramPhoto img={photos[0].node.display_url} />
-            <InstagramPhoto img={photos[1].node.display_url} />
-            <InstagramPhoto img={photos[2].node.display_url} />
-            <InstagramPhoto img={photos[3].node.display_url} />
-            <InstagramPhoto img={photos[4].node.display_url} />
-            <InstagramPhoto img={photos[5].node.display_url} />
-            <InstagramPhoto img={photos[6].node.display_url} />
-            <InstagramPhoto img={photos[7].node.display_url} />
-            <InstagramPhoto img={photos[8].node.display_url} />
+            <InstagramPhoto code={photos[0].node.shortcode} img={photos[0].node.display_url} />
+            <InstagramPhoto code={photos[1].node.shortcode} img={photos[1].node.display_url} />
+            <InstagramPhoto code={photos[2].node.shortcode} img={photos[2].node.display_url} />
+            <InstagramPhoto code={photos[3].node.shortcode} img={photos[3].node.display_url} />
+            <InstagramPhoto code={photos[4].node.shortcode} img={photos[4].node.display_url} />
+            <InstagramPhoto code={photos[5].node.shortcode} img={photos[5].node.display_url} />
+            <InstagramPhoto code={photos[6].node.shortcode} img={photos[6].node.display_url} />
+            <InstagramPhoto code={photos[7].node.shortcode} img={photos[7].node.display_url} />
+            <InstagramPhoto code={photos[8].node.shortcode} img={photos[8].node.display_url} />
            </> : null
           }
         </div>
