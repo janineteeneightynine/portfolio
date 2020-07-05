@@ -10,13 +10,16 @@ function DesignGalleryContainer() {
   const RSS_URL = `https://historytheorymethodology.wordpress.com/category/design-gallery/feed`;
   
   useEffect(() => {
-    fetch('https://cors-anywhere.herokuapp.com/' + RSS_URL)
+    fetch('https://thingproxy.freeboard.io/fetch/' + RSS_URL)
     .then(response => response.text())
     .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
     .then(data => parseXML(data))
     .then(parsed => {
       console.log(parsed.channel.item, ' this is the item')
       dispatch(setDesignArticles(parsed.channel.item))
+    })
+    .catch(function(e) {
+      console.error(e.message)
     })
   }, [])
   

@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
-// import ig1 from './ig1.svg';
-import ig1 from './ig2.svg';
-import li1 from './li1.svg';
-import li2 from './li2.svg'
+import ig4 from './Instagram_font_awesome.svg';
+import li3 from './linkedin.svg';
 
 import './ContactSection.css';
 
@@ -37,16 +35,23 @@ function ContactSection() {
     console.log(event.target.value)
     setMessage(event.target.value)
   }
-  
+
   return (
     <div id='contactSection'>
+      <div id='contactTitleMobile'> Contact Janine </div>
       <div id='contactInfo'>
         <div id='contactBox'>
           <div id='contactTitle'> Contact Janine </div>
           <div id='socialMediaLinks' >
-            <div id='ig'> Follow  <img src={ig1}/> </div>
-            <div id='linkedIn'> Link Up <img src={li1}/>  </div>
+            <div id='ig' onClick={() => window.open('https://www.instagram.com/janineteeneightynine/', '_blank')}> <img src={ig4}/> Follow  </div>
+            <div id='linkedIn' onClick={() => window.open('https://www.linkedin.com/in/janine-sleem-21985a32', '_blank')}> <img src={li3}/> Link Up </div>
           </div>
+        </div>
+      </div>
+      <div id='contactInfoMobile'>
+        <div id='socialMediaLinksMobile'>
+          <div id='ig' onClick={() => window.open('https://www.instagram.com/janineteeneightynine/', '_blank')}> <img src={ig4}/> Follow  </div>
+          <div id='linkedIn' onClick={() => window.open('https://www.linkedin.com/in/janine-sleem-21985a32', '_blank')}> <img src={li3}/> Link Up </div>
         </div>
       </div>
       <div id='inputSection'>

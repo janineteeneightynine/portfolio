@@ -9,14 +9,23 @@ function PhotoJournal() {
   const URL = 'https://www.instagram.com/graphql/query/?query_hash=472f257a40c653c64c666ce877d59d2b&variables={%22id%22:%222695972618%22,%22first%22:9}'
 
   useEffect(() => {
-    fetch('https://cors-anywhere.herokuapp.com/' + URL)
+    fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(URL)}`)
     .then(response => response.json())
     .then(json => {
+      json = JSON.parse(json.contents)
       let photos = json.data.user.edge_owner_to_timeline_media.edges
       console.log(photos[0], ' this is photos')
       setPhotos(photos)
+    }).catch(function(e) {
+      console.error(e.message)
     })
   }, [])
+
+  // useEffect(() => {
+  //   fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(URL)}`)
+  //   .then(response => response.json())
+  //   .then(json => console.log(JSON.parse(json.contents)))
+  // }, [])
 
   return (
     <div id = 'photoGalleryContainer'>

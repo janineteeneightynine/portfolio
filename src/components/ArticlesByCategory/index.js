@@ -15,6 +15,13 @@ function ArticlesByCategory(props) {
   function scrollToTop() {
     scroll.scrollToTop({duration: 500})
   }
+
+  function hideDropdown() {
+    let dropdown = document.getElementById('dropdown')
+    let compStyles = window.getComputedStyle(dropdown);
+    let px = compStyles.getPropertyValue('top')
+    if (px === '0px') document.getElementById('dropdown').style.top = '-200px'
+  }
   
   useEffect(() => {
     window.scrollTo({top: 0, left:0, behavior: 'smooth'})
@@ -27,7 +34,7 @@ function ArticlesByCategory(props) {
     if (type !== 'design' && type !== 'art' && type !== 'all') RSS_URL = `https://historytheorymethodology.wordpress.com/category/${type}/feed`
     setType(type)
 
-    fetch('https://cors-anywhere.herokuapp.com/' + RSS_URL)
+    fetch('https://thingproxy.freeboard.io/fetch/' + RSS_URL)
       .then(response => response.text())
       .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
       .then(data => parseXML(data))
@@ -56,7 +63,7 @@ function ArticlesByCategory(props) {
     <>
       <ArticlesNavMobile />
       <SideNavArticles type={props.match.params.type} />
-      <div id='articlesByCategoryContainer'>
+      <div id='articlesByCategoryContainer' onClick={() => hideDropdown()}>
         <ArticlesInfo articleTitle={title}/>
         <ArticlesList articles={articles} type={articleType} />
       </div>

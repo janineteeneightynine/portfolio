@@ -40,25 +40,29 @@
 }
 
 .post .postTitle {
-  font-size: 2.5vh;
+  font-size: 1.5vmax;
   line-height: 110%;
   text-align: left;
   align-content: center;
-  /* background-color: #F9DF68; */
   margin-top: 5%;
-  /* padding: 2.5%; */
+  /* padding: 2.5% 0% 2.5% 0%; */
+  transition: .25s;
+}
+
+.post:hover .postTitle {
+  color: #F9DF68;
 }
 
 @media (max-width: 768px) {
   /* For mobile phones: */
   .post .postTitle {
-    font-size: 3vh;
+    font-size: 3.2vmax;
   }
 }
 
 .post .postParagraph {
   margin-top: 2.5%;
-  font-size: 1.9vh;
+  font-size: 1vmax;
   text-align: left;
   line-height: 120%;
 }
@@ -66,7 +70,7 @@
 @media (max-width: 768px) {
   /* For mobile phones: */
   .post .postParagraph {
-    font-size: 2.5vh;
+    font-size: 2.5vmax;
   }
 }
 

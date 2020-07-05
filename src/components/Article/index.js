@@ -20,6 +20,13 @@ function Article(props) {
   function scrollToTop() {
     scroll.scrollToTop({duration: 500})
   }
+
+  function hideDropdown() {
+    let dropdown = document.getElementById('dropdown')
+    let compStyles = window.getComputedStyle(dropdown);
+    let px = compStyles.getPropertyValue('top')
+    if (px === '0px') document.getElementById('dropdown').style.top = '-200px'
+  }
   
   useEffect(() => {
     // window.scrollTo({top: 0, left:0, behavior: 'smooth'})
@@ -29,7 +36,7 @@ function Article(props) {
     if (type === 'art') RSS_URL = `https://historytheorymethodology.wordpress.com/category/art-gallery/feed`
     if (type !== 'design' && type !== 'art') RSS_URL = `https://historytheorymethodology.wordpress.com/feed`
     
-      fetch('https://cors-anywhere.herokuapp.com/' + RSS_URL)
+      fetch('https://thingproxy.freeboard.io/fetch/' + RSS_URL)
       .then(response => response.text())
       .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
       .then(data => parseXML(data))
@@ -61,13 +68,13 @@ function Article(props) {
     <>
       <ArticlesNavMobile />
       <SideNavArticles type={props.match.params.type.toLowerCase()} />
-      <div id='articleContainer'>
+      <div id='articleContainer' onClick={() => hideDropdown()}>
         <ArticlesInfo 
           articleTitle={articleData.articleTitle} 
           articleAuthor={articleData.articleAuthor}
           articleDate={articleData.articleDate}
         />
-        <div id='article'> {articleData.articleBody}
+        <div id='article' onClick={() => hideDropdown()}> {articleData.articleBody}
             <NavLink to={`/articles/${props.match.params.type.toLowerCase()}/${articleData.nextTitle}`} id='nextArticleMobile'> 
               <i className='fa fa-angle-right'  
                 style={{
