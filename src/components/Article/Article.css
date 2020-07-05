@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   height: 100%;
+  overflow-y: visible;
 }
 
 #articleContainer img {
