@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3acdfbcee3f7d595c00b62859cab3e02",
+    "revision": "df628152b2de4d451df92b180287944e",
     "url": "/portfolio/index.html"
   },
   {
-    "revision": "17bcedc4236b2fdccd09",
-    "url": "/portfolio/static/css/3.a987e044.chunk.css"
+    "revision": "067b1399d19355ac495e",
+    "url": "/portfolio/static/css/3.681921c9.chunk.css"
   },
   {
-    "revision": "e60c1164029677fc6da4",
+    "revision": "fcd46520c81bf690a0e3",
     "url": "/portfolio/static/css/4.9c150218.chunk.css"
   },
   {
-    "revision": "2434082cdea1f11c853d",
+    "revision": "712f4211e401a5fd9ac3",
     "url": "/portfolio/static/css/5.ea622b43.chunk.css"
   },
   {
-    "revision": "974d9bcc8ba538684967",
+    "revision": "9d5e2ec4d4220a40075b",
     "url": "/portfolio/static/css/6.ea622b43.chunk.css"
   },
   {
-    "revision": "fe23c37d77981071fb4e",
-    "url": "/portfolio/static/css/main.5d1dd620.chunk.css"
+    "revision": "5a6736b781fc0a5e4adb",
+    "url": "/portfolio/static/css/main.6046ecc9.chunk.css"
   },
   {
     "revision": "1e47128acf2308800bc2",
@@ -32,28 +32,28 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/portfolio/static/js/2.f8941d34.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "17bcedc4236b2fdccd09",
-    "url": "/portfolio/static/js/3.92902f93.chunk.js"
+    "revision": "067b1399d19355ac495e",
+    "url": "/portfolio/static/js/3.d9de75ba.chunk.js"
   },
   {
-    "revision": "e60c1164029677fc6da4",
-    "url": "/portfolio/static/js/4.6f659142.chunk.js"
+    "revision": "fcd46520c81bf690a0e3",
+    "url": "/portfolio/static/js/4.45bffc41.chunk.js"
   },
   {
-    "revision": "2434082cdea1f11c853d",
-    "url": "/portfolio/static/js/5.7d64f3a7.chunk.js"
+    "revision": "712f4211e401a5fd9ac3",
+    "url": "/portfolio/static/js/5.08089457.chunk.js"
   },
   {
-    "revision": "974d9bcc8ba538684967",
-    "url": "/portfolio/static/js/6.8414f2fc.chunk.js"
+    "revision": "9d5e2ec4d4220a40075b",
+    "url": "/portfolio/static/js/6.64e5dfce.chunk.js"
   },
   {
-    "revision": "fe23c37d77981071fb4e",
-    "url": "/portfolio/static/js/main.af239880.chunk.js"
+    "revision": "5a6736b781fc0a5e4adb",
+    "url": "/portfolio/static/js/main.5e47b5b4.chunk.js"
   },
   {
-    "revision": "eaacb840fb752c6467dc",
-    "url": "/portfolio/static/js/runtime-main.976596a5.js"
+    "revision": "6ebca705fc3b3e777ab4",
+    "url": "/portfolio/static/js/runtime-main.a2880c37.js"
   },
   {
     "revision": "062ca6dc5a56bd5723759498e8bfd494",
@@ -168,6 +168,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/portfolio/static/media/Harlem_thumbnail.db8481d5.jpg"
   },
   {
+    "revision": "a101d6eb09f4f3720342ca21a0ef1051",
+    "url": "/portfolio/static/media/Instagram_font_awesome.a101d6eb.svg"
+  },
+  {
     "revision": "d72811f3c2330705b0ec15a28654393b",
     "url": "/portfolio/static/media/Queensboro_2.d72811f3.jpg"
   },
@@ -240,16 +244,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/portfolio/static/media/XSRE_thumbnail.004ece98.jpg"
   },
   {
-    "revision": "d49a6fa4cb7cdf1112e987e307db6a8f",
-    "url": "/portfolio/static/media/ig2.d49a6fa4.svg"
-  },
-  {
-    "revision": "699ee0fef0919d5f6f96e9b0a792f02d",
-    "url": "/portfolio/static/media/li1.699ee0fe.svg"
-  },
-  {
-    "revision": "88a4e62387d4e1721bceea9e734503db",
-    "url": "/portfolio/static/media/li2.88a4e623.svg"
+    "revision": "e88ceebbca8c17a7c1664d32582e8392",
+    "url": "/portfolio/static/media/linkedin.e88ceebb.svg"
   },
   {
     "revision": "2cd8aec5a30bebb071aedfba51e68bc3",
