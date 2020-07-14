@@ -16,6 +16,7 @@ function ProjectCard(props) {
       </div>
       <div className='thumbnailContainer'>
         <div className='thumbnail' id={props.id}>
+          <span class="background-image" role="img" aria-label={`thumbnail for project with the title ${props.title}`}> </span>
         </div>
         <div className='projectTitle'>{props.title}</div>
       </div>

@@ -34,9 +34,8 @@ function ArticlesByCategory(props) {
     if (type !== 'design' && type !== 'art' && type !== 'all') RSS_URL = `https://historytheorymethodology.wordpress.com/category/${type}/feed`
     setType(type)
 
-    fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(RSS_URL)}`)
+    fetch('https://cors-anywhere.herokuapp.com/' + RSS_URL)
       .then(response => response.text())
-      .then(text => JSON.parse(text).contents)
       .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
       .then(data => parseXML(data))
       .then(parsed => {

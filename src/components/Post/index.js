@@ -8,7 +8,9 @@ function Post(props) {
   if (props.paragraph) paragraph = decodeHTMLEntities(props.paragraph)
   return (
     <NavLink to={`/articles/${props.type}/${props.title}`} className='post' >
-      <div className='postImage' style={{backgroundImage: `url(${props.img})`}}></div>
+      <div className='postImage' style={{backgroundImage: `url(${props.img})`}}>
+        <span class="background-image" role="img" aria-label={`thumbnail for article with the title ${props.title}`}> </span>
+      </div>
       <div className='postTitle'> <b> {props.title} </b>  </div>
       <div className='postParagraph'> 
         {paragraph} . . . 

@@ -16,6 +16,7 @@ function SlideImage(props) {
         <div className='item'>
         {loaded ?  null : <div className='loader'></div>}
           <img id='slideImage'
+            alt={`Slide image for a project called ${props.project}`}
             style={loaded ? {} : {display: 'none'} }
             onLoad={() => {
               makeLoaded(true)

@@ -29,16 +29,14 @@ function Article(props) {
   }
   
   useEffect(() => {
-    // window.scrollTo({top: 0, left:0, behavior: 'smooth'})
     let RSS_URL;
     let type = props.match.params.type.toLowerCase()
     if (type === 'design') RSS_URL = `https://historytheorymethodology.wordpress.com/category/design-gallery/feed`
     if (type === 'art') RSS_URL = `https://historytheorymethodology.wordpress.com/category/art-gallery/feed`
     if (type !== 'design' && type !== 'art') RSS_URL = `https://historytheorymethodology.wordpress.com/feed`
     
-      fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(RSS_URL)}`)
+      fetch('https://cors-anywhere.herokuapp.com/' + RSS_URL)
       .then(response => response.text())
-      .then(text => JSON.parse(text).contents)
       .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
       .then(data => parseXML(data))
       .then(parsed => {
